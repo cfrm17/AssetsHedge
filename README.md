@@ -1,6 +1,6 @@
 # FX Asset sHedge
 
-The FX assets hedge model is employed to conduct the hedge effectiveness test for the foreign currency denominated floating rate LIBOR assets using CAD funding. The hedging derivative is a cross currency interest rate swap. The hedging is designated as the Cash Flow Hedging in which both interest rate risk and foreign exchange risk are hedged. 
+The FX assets hedge model is employed to conduct the hedge effectiveness test for the foreign currency denominated floating rate LIBOR assets using CAD funding. The hedging derivative is a cross currency interest rate swap or accumulator swap (https://finpricing.com/lib/FxAccumulator.html). The hedging is designated as the Cash Flow Hedging in which both interest rate risk and foreign exchange risk are hedged. 
 
 A hypothetical cross currency interest rate swap (XCIRS), with the floating leg terms matching the critical terms of the hedged FC floating rate assets, is used as the proxy measure. The actual hedging derivative is another XCIRS. Specifically, the trade, upon which the model is intended to target, is substituted by a cross currency swap, which is hedged by another XCIRS.
 
@@ -16,13 +16,6 @@ Once we determine the present value and all the projected future values of the s
 
 The Ineffectiveness Test is also implemented, which is calculated by comparing the cumulative change in fair values of the hypothetical derivative and the cumulative change in fair value of the actual hedging derivative. The values for calculating ineffectiveness test are obtained from Infinity. The rationale is there are more forward points in Infinity compared to that in the model to make the results more accurate.
 
-Reference:
-
-https://finpricing.com/lib/EqVariance.html
-
-https://zenodo.org/record/6546805/files/FxHedgeModel.pdf
-
-https://zenodo.org/record/6546805#.YpDu9KgpDq4
 
 
 
